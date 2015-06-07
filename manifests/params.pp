@@ -17,7 +17,7 @@ class samba::params {
       if $::operatingsystem == 'Ubuntu' {
         $service = [ 'smbd' ]
       } else {
-        if $::operatingsystemmajrelease <= 7 {
+        if $::operatingsystemmajrelease <= '7' {
           $service = [ 'samba' ]
         } else {
           $service = [ 'smbd', 'nmbd' ]
